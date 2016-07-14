@@ -3,10 +3,10 @@
 \usetheme{metropolis}
 
 
-\newcommand{\warn}[1]{\textcolor{blue}{#1}}
+\newcommand{\warn}[1]{\textcolor{red}{#1}}
 % \newcommand{\accent}[1]{\textcolor{orange}{#1}}
 
-\title{Metodi funzionali per }
+\title{Metodi funzionali per valutare la conservazione evolutiva delle sequenze regolatrici}
 % TODO check del titolo
 % TODO logo unito
 % \date{\today} TODO
@@ -16,76 +16,79 @@
 \begin{document}
     \maketitle
 
-    % NB mettere le sezioni?
-    \begin{frame}{2REMOVE}
-        \begin{itemize}
-            \item introduzione alla necessita' di modelli predittivi,
-                        con due parole sulla biologia
-            \item limiti dei modelli predittivi?
-            \item introduzione agli articoli
-            \item Articoli
-            \item Conclusione
-            \item Ringraziamenti e affini
-        \end{itemize}
-    \end{frame}
-
     % ---------------------------
     \begin{frame}{Introduzione}
-        * alcuni lavori hanno studiato regioni non conserved
+        Il miglioramente delle tecniche di analisi ha portato alla luce una grande mole di dati.\\
+        Si e' posto la necessita' di prevedere quali sequenze siano attive, e quale sia la loro
+        funzione.\\
+        La conservazione evolutiva delle sequenze e' uno degli elementi su cui ci si basa maggiormente
+        per applicare queste previsioni.
     \end{frame}
+
 
     \begin{frame}{Introduzione}
-
+        Nonostante esistano \warn{forti prove} a favore dell'uso della conservazione,
+        alcuni studi hanno individuato sequenze la cui funzionalita' e' conservata,
+        ma non la loro sequenza.
+        Sono presentate delle tecniche per poter prevedere queste sequenze attraverso
+        analisi di carattere funzionale.
     \end{frame}
 
+    \section{Fisher et al.}
 
     \begin{frame}{Fisher et al. (2006)}
         % TODO che informazioni mettere dell'articolo
-        Viene analizzato il \emph{locus} del gene \emph{Ret}, i cui esoni
-        sono ben conservati, al contrario delle regioni limitrofe.\\
-        Si confronta l'espressione delle regioni regolatorie
-        tra i teleosti (Zebrafish) e i mammiferi (uomo).\\
-        % TODO appronfonodire la questione della tecnica usata
+        Ipotesi: la funzione regolatrice di regioni non-coding puo' essere conservata,
+        in assenza di conservazione di sequenza.
+        Oggetto di studio e' il \emph{locus} del gene \emph{Ret}, i cui esoni sono ben conservati,
+        al contrario delle regioni limitrofe.\\
+        Si confronta l'espressione delle regioni regolatrici tra i teleosti (Zebrafish) e i mammiferi (uomo).\\
     \end{frame}
 
 
     \begin{frame}{Fisher et al. (2006)}
-        Per definire le regioni regolatorie in maniera \emph{unbiased},
-        si confrontano specie evolutivamente vicine.
+        Le regione regolatrici sono definite attraverso il confronto di sequenze
+        tra specie evolutivamente vicine.
         % TODO spiegare perche' si usano specie vicine?
         \begin{itemize}
             \item ZCS-Zebrafish Conserved Sequences:\\
-                        10 regioni conservate tra zebrafish e pesce palla
+            10 regioni conservate tra zebrafish e pesce palla
             \item HCS-Human Conserved Sequences:\\
-                        13 regioni conservate tra uomo e alcuni mammiferi
+            13 regioni conservate tra uomo e alcuni mammiferi
         \end{itemize}
     \end{frame}
 
+
     \begin{frame}{Fisher et al. (2006)}
-        Le regioni regolatorie sono espresse in embrioni di zebrafish,
+        Le regioni regolatrici sono espresse in embrioni di zebrafish,
         attraverso costrutti transgenici con geni reporter.
         \begin{itemize}
             \item 9 su 10 ZCS hanno un espressione riconducibile al gene \emph{Ret}
             % NOTE cosa si intende per espressione riconducibile
-            \item 11 su 13 HCS hanno un espressione riconducibile al gene \emph{Ret}
+            \item 11 su 13 HCS hanno un espressione riconducibile al gene \emph{Ret},\\
+            anche in tessuti non presenti nei mammiferi o anatomicamente diversi.
         \end{itemize}
     \end{frame}
 
+
     \begin{frame}{Fisher et al. (2006)}
-        Le 11 HCS sono espresse anche in tessuti non presenti nei mammiferi (example)
-        o fortemente diverse (example). \\
-        Le regioni regolatorie umane sono quindi funzionalmente analoghe a quelle di zebrafish.
-        % TODO insert image here
+        \frametitle{Pictures}
+        \begin{figure}
+            \includegraphics[scale=0.2]{RET1.jpg}
+            \caption{Espressione delle ZCS e HCS}
+        \end{figure}
+        Le regioni regolatrici umane sono quindi funzionalmente analoghe a quelle di zebrafish.
     \end{frame}
 
-    % TODO discussione??
+    \section{Yao et al.}
 
     \begin{frame}{Yao et al. (2016)}
         Si \warn{ricercano} nuovi enhancers, basandosi su diverse caratteristiche funzionali
-        legate alla loro espressione, nella zli-\emph{zona limitans intrathalamica}.
+        legate alla loro espressione, nella zli-\emph{zona limitans intrathalamica}.\\
         In particolare si \warn{ricercano} enhancers che regolino lo sviluppo di questa regione,
-        prendendo come punto di partenza e' il gene \emph{Ssh} e il relativo enhancer \accent{SBE1}.
+        prendendo come punto di partenza il gene \emph{Ssh} e il relativo enhancer \textcolor{orange}{SBE1}.
     \end{frame}
+
 
     \begin{frame}{Yao et al. (2016)}
         Si cercano enhancers espressi in tessuti e momenti simili a SBE1.\\
@@ -96,6 +99,7 @@
         % TODO insert image
     \end{frame}
 
+
     \begin{frame}{Yao et al. (2016)}
         I motifs sono soggetti ad analisi per confermare la loro funzione di TFBS
         \begin{itemize}
@@ -105,25 +109,29 @@
         \end{itemize}
     \end{frame}
 
+
     \begin{frame}{Yao et al. (2016)}
         La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli,
         suggerendo la presenza di un altro enhancer.\\
-        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \accent{SBE5}.\\
+        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \textcolor{orange}{SBE5}.\\
         Tutte le verifiche sui TF applicate a SBE1 danno esito positivo per SBE5.\\
         La delezione di SBE1 e SBE5 \warn{silenzia} \emph{Ssh} nella zli.
     \end{frame}
 
+
     \begin{frame}{Yao et al. (2016)}
         Vengono usati i motifs individuati come base per una ricerca in \emph{S.kowalevskii}.\\
-        \accent{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
+        \textcolor{orange}{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
         % TODO insert image here?
     \end{frame}
+
 
     \begin{frame}{Yao et al. (2016)}
         Costrutti transgenici di skSBE1 in embrioni di topo hanno un pattern di espressione
         molto simile a mmSBE1. Lo stesso vale per mmSBE1 e mmSBE5 in \emph{S.kowalevskii}.
         % TODO aggiungere la parte sulle altre specie? Non si e' mai parlato della questione della zli
     \end{frame}
+
 
     \begin{frame}{Blow et al. (2010)}
         Il numero di enhancers attivi nello sviluppo del embrionale del cuore
@@ -132,10 +140,11 @@
         ovunque nell'embrione di topo.
         \begin{itemize}
             \item 3597 regioni nel cuore
-            \item 2759, 2786 e 3839regioni nel prosencefalo,
+            \item 2759, 2786 e 3839 regioni nel prosencefalo,
             mesencefalo e negli arti
         \end{itemize}
     \end{frame}
+
 
     \begin{frame}{Blow et al.}
         Conservazione delle sequenze:
@@ -149,6 +158,7 @@
         \end{itemize}
     \end{frame}
 
+
     \begin{frame}{Blow et al.}
         Test in vivo di 130 possibili enhancers predetti in cuore,
         usando un saggio transgenico in embrioni di topo:
@@ -159,6 +169,20 @@
             `heart-development' in Gene Ontology.
             \item arricchiti 14 volte delle regioni di 10kb a monte di 1000 geni espressi
             durante lo sviluppo embrionale del cuore.
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Conclusione}
+        % NOTE nome Conclusione per la slide
+
+    \end{frame}
+
+    \begin{frame}{Ringraziamenti}
+        \begin{itemize}
+            \item Prof.\ Paolo Provero
+            \item Elena Grassi e il team dell'Unita Computazionale di Bioinformatica
+            \item \wanr{Gli altri}
         \end{itemize}
     \end{frame}
 
