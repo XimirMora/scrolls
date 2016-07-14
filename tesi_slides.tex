@@ -4,7 +4,7 @@
 
 
 \newcommand{\warn}[1]{\textcolor{blue}{#1}}
-\newcommand{\hh}[1]{\textcolor{orange}{#1}}
+% \newcommand{\accent}[1]{\textcolor{orange}{#1}}
 
 \title{Metodi funzionali per }
 % TODO check del titolo
@@ -49,7 +49,7 @@
     \end{frame}
 
 
-    \begin{frame}
+    \begin{frame}{Fisher et al. (2006)}
         Per definire le regioni regolatorie in maniera \emph{unbiased},
         si confrontano specie evolutivamente vicine.
         % TODO spiegare perche' si usano specie vicine?
@@ -61,7 +61,7 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Fisher et al. (2006)}
         Le regioni regolatorie sono espresse in embrioni di zebrafish,
         attraverso costrutti transgenici con geni reporter.
         \begin{itemize}
@@ -71,7 +71,7 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Fisher et al. (2006)}
         Le 11 HCS sono espresse anche in tessuti non presenti nei mammiferi (example)
         o fortemente diverse (example). \\
         Le regioni regolatorie umane sono quindi funzionalmente analoghe a quelle di zebrafish.
@@ -84,10 +84,10 @@
         Si \warn{ricercano} nuovi enhancers, basandosi su diverse caratteristiche funzionali
         legate alla loro espressione, nella zli-\emph{zona limitans intrathalamica}.
         In particolare si \warn{ricercano} enhancers che regolino lo sviluppo di questa regione,
-        prendendo come punto di partenza e' il gene \emph{Ssh} e il relativo enhancer \hh{SBE1}.
+        prendendo come punto di partenza e' il gene \emph{Ssh} e il relativo enhancer \accent{SBE1}.
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Yao et al. (2016)}
         Si cercano enhancers espressi in tessuti e momenti simili a SBE1.\\
         Vengono individuati 52 possibili enhancers, di cui 7 particolarmente \warn{simili}.\\
         Per comprendere quali siano le caratteristiche che li accomunino si
@@ -96,7 +96,7 @@
         % TODO insert image
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Yao et al. (2016)}
         I motifs sono soggetti ad analisi per confermare la loro funzione di TFBS
         \begin{itemize}
             \item saggio \emph{in vitro} con reporter luciferasi per enhancers con motifs deleti
@@ -105,24 +105,62 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Yao et al. (2016)}
         La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli,
         suggerendo la presenza di un altro enhancer.\\
-        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \hh{SBE5}.\\
+        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \accent{SBE5}.\\
         Tutte le verifiche sui TF applicate a SBE1 danno esito positivo per SBE5.\\
         La delezione di SBE1 e SBE5 \warn{silenzia} \emph{Ssh} nella zli.
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Yao et al. (2016)}
         Vengono usati i motifs individuati come base per una ricerca in \emph{S.kowalevskii}.\\
-        \hh{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
+        \accent{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
         % TODO insert image here?
     \end{frame}
 
-    \begin{frame}
+    \begin{frame}{Yao et al. (2016)}
         Costrutti transgenici di skSBE1 in embrioni di topo hanno un pattern di espressione
         molto simile a mmSBE1. Lo stesso vale per mmSBE1 e mmSBE5 in \emph{S.kowalevskii}.
         % TODO aggiungere la parte sulle altre specie? Non si e' mai parlato della questione della zli
     \end{frame}
+
+    \begin{frame}{Blow et al. (2010)}
+        Il numero di enhancers attivi nello sviluppo del embrionale del cuore
+        e' molto basso rispetto agli altri tessuti.
+        ChipSeq con p300, coattivatore trascrizionale, espresso quasi
+        ovunque nell'embrione di topo.
+        \begin{itemize}
+            \item 3597 regioni nel cuore
+            \item 2759, 2786 e 3839regioni nel prosencefalo,
+            mesencefalo e negli arti
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Blow et al.}
+        Conservazione delle sequenze:
+        \begin{itemize}
+            \item 84\% delle regione predette \warn{in} cuore non sovrappongo quelle degli altri tessuti
+            \item 6\% delle regioni predette in cuore si sovrappongono a regioni `ultra-conserved'
+            in PhastCons.\\
+            In proencefalo, mesencefalo e negli arti si ha il 44\%, 39\% e 30\% rispettivamente.
+            \item le regioni del proencefalo sono 7 volte piu' presenti tra quelle conservate
+            tra mammiferi e pesci
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Blow et al.}
+        Test in vivo di 130 possibili enhancers predetti in cuore,
+        usando un saggio transgenico in embrioni di topo:
+        \begin{itemize}
+            \item 81 su 130 sono enhancers attivi \underline{solo} nel cuore durante lo sviluppo
+            \item \warn{30 volte il numero predetto con la conservazione}
+            \item arricchiti 13 volte nelle regioni di 10kb a monte dei geni definiti
+            `heart-development' in Gene Ontology.
+            \item arricchiti 14 volte delle regioni di 10kb a monte di 1000 geni espressi
+            durante lo sviluppo embrionale del cuore.
+        \end{itemize}
+    \end{frame}
+
 
 \end{document}
