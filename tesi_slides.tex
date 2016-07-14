@@ -3,7 +3,8 @@
 \usetheme{metropolis}
 
 
-\newcommand{\warn}[1]{\texcolor{blue}{#1}}
+\newcommand{\warn}[1]{\textcolor{blue}{#1}}
+\newcommand{\hh}[1]{\textcolor{orange}{#1}}
 
 \title{Metodi funzionali per }
 % TODO check del titolo
@@ -33,13 +34,17 @@
         * alcuni lavori hanno studiato regioni non conserved
     \end{frame}
 
+    \begin{frame}{Introduzione}
+
+    \end{frame}
+
 
     \begin{frame}{Fisher et al. (2006)}
         % TODO che informazioni mettere dell'articolo
         Viene analizzato il \emph{locus} del gene \emph{Ret}, i cui esoni
         sono ben conservati, al contrario delle regioni limitrofe.\\
         Si confronta l'espressione delle regioni regolatorie
-        tra i teleosti(Zebrafish) e i mammiferi(uomo).\\
+        tra i teleosti (Zebrafish) e i mammiferi (uomo).\\
         % TODO appronfonodire la questione della tecnica usata
     \end{frame}
 
@@ -67,21 +72,19 @@
     \end{frame}
 
     \begin{frame}
-        Le 11 HCS sono espresse anche in tessuti non presenti nei mammiferi(example)
-        o fortemente diverse(example). \\
+        Le 11 HCS sono espresse anche in tessuti non presenti nei mammiferi (example)
+        o fortemente diverse (example). \\
         Le regioni regolatorie umane sono quindi funzionalmente analoghe a quelle di zebrafish.
         % TODO insert image here
     \end{frame}
 
-    \begin{frame}{DISCUSSION??}
-
-    \end{frame}
+    % TODO discussione??
 
     \begin{frame}{Yao et al. (2016)}
         Si \warn{ricercano} nuovi enhancers, basandosi su diverse caratteristiche funzionali
         legate alla loro espressione, nella zli-\emph{zona limitans intrathalamica}.
         In particolare si \warn{ricercano} enhancers che regolino lo sviluppo di questa regione,
-        prendendo come punto di partenza e' il gene \emph{Ssh} e il relativo enhancer \textcolor{orange}{SBE1}.
+        prendendo come punto di partenza e' il gene \emph{Ssh} e il relativo enhancer \hh{SBE1}.
     \end{frame}
 
     \begin{frame}
@@ -90,10 +93,36 @@
         Per comprendere quali siano le caratteristiche che li accomunino si
         cercano motifs e TFBS su questi.\\
         Vengono individuati 6 motivi, che presentano sequenze capaci di potersi legare a TF noti.
+        % TODO insert image
     \end{frame}
 
     \begin{frame}
-        l
+        I motifs sono soggetti ad analisi per confermare la loro funzione di TFBS
+        \begin{itemize}
+            \item saggio \emph{in vitro} con reporter luciferasi per enhancers con motifs deleti
+            \item ChipSeq sui motifs e i TF
+            \item saggio \emph{in vivo} con reporter LacZ per motifs mutati
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+        La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli,
+        suggerendo la presenza di un altro enhancer.\\
+        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \hh{SBE5}.\\
+        Tutte le verifiche sui TF applicate a SBE1 danno esito positivo per SBE5.\\
+        La delezione di SBE1 e SBE5 \warn{silenzia} \emph{Ssh} nella zli.
+    \end{frame}
+
+    \begin{frame}
+        Vengono usati i motifs individuati come base per una ricerca in \emph{S.kowalevskii}.\\
+        \hh{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
+        % TODO insert image here?
+    \end{frame}
+
+    \begin{frame}
+        Costrutti transgenici di skSBE1 in embrioni di topo hanno un pattern di espressione
+        molto simile a mmSBE1. Lo stesso vale per mmSBE1 e mmSBE5 in \emph{S.kowalevskii}.
+        % TODO aggiungere la parte sulle altre specie? Non si e' mai parlato della questione della zli
     \end{frame}
 
 \end{document}
