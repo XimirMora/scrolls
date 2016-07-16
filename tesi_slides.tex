@@ -4,10 +4,12 @@
 
 
 \newcommand{\warn}[1]{\textcolor{red}{#1}}
+\newcommand{\hh}[1]{\textcolor{orange}{#1}}
+\newcommand{\frag}[2]{\uncover<#1>{\item #2}}
+% \long\def\frag[#1]#2{\uncover<#1>{\item #2}}
 
 \title{Metodi funzionali per valutare la conservazione evolutiva delle sequenze regolatrici}
 % TODO check del titolo
-% TODO logo unito
 \date{}
 \author{Relatore: Prof.\ Paolo Provero\\Candidato: Stefano Gilotto}
 \institute{Universita' degli studi di Torino\\Dipartimento di Biotecnologie Molecolari e Scienze per la Salute}
@@ -18,30 +20,33 @@
     \maketitle
 
     \begin{frame}[plain]{Introduzione}
-        Il miglioramento delle tecniche di analisi ha portato alla luce una grande mole di dati.
-        Questo ha posto la necessita' di prevedere quali sequenze siano attive, e quale sia la loro
-        funzione.\\
-        La conservazione evolutiva delle sequenze e' uno degli elementi su cui ci si basa maggiormente
-        per applicare queste previsioni.
+        Miglioramento delle tecniche di analisi:
+        \begin{itemize}
+            \frag{1-}{grande mole di dati biologici}
+            \frag{2-}{necessita' di poter prevedere la funzione delle sequenze}
+            \frag{3-}{conservazione evolutiva delle sequenze}
+        \end{itemize}
     \end{frame}
 
 
     \begin{frame}[plain]{Introduzione}
-        Nonostante esistano numerose evidenze a favore dell'uso della conservazione,
-        alcuni studi hanno individuato sequenze la cui funzionalita' e' conservata,
-        ma non la loro sequenza.\\
+        \begin{itemize}
+            \item numerose evidenze a favore dell'utilizzo della conservazione
+            \item esistono sequenze la cui funzione e' conservata, ma non la loro sequenza
+        \end{itemize}
         Sono presentate delle tecniche per poter prevedere queste sequenze attraverso
         analisi di carattere funzionale.
     \end{frame}
 
-    \section{Fisher et al.}
+    % \section{Fisher et al.}
 
     \begin{frame}[plain]{Fisher et al. (2006)}
         % TODO che informazioni mettere dell'articolo
-        Ipotesi: la funzione regolatrice di regioni non-coding puo' essere conservata,
+        \hh{Ipotesi}: la funzione regolatrice di regioni non-coding puo' essere conservata,
         in assenza di conservazione di sequenza.\\
-        Oggetto di studio e' il \emph{locus} del gene \emph{Ret}, i cui esoni sono ben conservati,
-        al contrario delle regioni limitrofe. Si confronta l'espressione delle regioni regolatrici
+        \hh{Oggetto di studio}: il \emph{locus} del gene \emph{Ret}, i cui esoni sono ben conservati,
+        al contrario delle regioni limitrofe.\\
+        \hh{Metodo}: Si confronta l'espressione delle regioni regolatrici
         tra i teleosti (Zebrafish) e i mammiferi (uomo).\\
     \end{frame}
 
@@ -78,22 +83,23 @@
         Le regioni regolatrici umane sono quindi funzionalmente analoghe a quelle di zebrafish.
     \end{frame}
 
-    \section{Yao et al.}
+    % \section{Yao et al.}
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        Si possono individuare nuovi enhancers, basandosi su diverse caratteristiche funzionali
-        legate alla loro espressione.\\
-        In particolare si ricercano regioni che regolino lo sviluppo
-        della nella zli-\emph{zona limitans intrathalamica},
-        prendendo come punto di partenza il gene \emph{Ssh} e il relativo enhancer \textcolor{orange}{SBE1}.
+        \hh{Ipotesi}: il controllo dello sviluppo della zli-\emph{zona limitans intrathalamica},
+        precede lo \warn{evoluzione dei vertebrati}.\\
+        \hh{Oggetto di studio}: il sistema di controllo della zli, specie il gene \emph{Ssh}
+        e il relativo enhancer \textcolor{cyan}{SBE1}.\\
+        \hh{Metodo}: ricerca di nuovi enhancers attraverso caratteristiche funzionali
     \end{frame}
 
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        Si cercano enhancers espressi in tessuti e momenti simili a SBE1.\\
-        Vengono individuati 52 possibili enhancers e ne sono selezionati 7 di particolare rilevanza.\\
-        Per comprendere quali siano le caratteristiche che li accomunino si
-        cercano motifs e TFBS su questi.\\
+        Si cercano enhancers espressi in tessuti e fasi dello sviluppo embrionale simili a SBE1.\\
+        \begin{itemize}
+            \frag{1-}{vengono individuati 52 enhancers}
+            \frag{2-}{si cercano motifs e TFBS su questi}
+        \end{itemize}
     \end{frame}
 
 
@@ -117,28 +123,34 @@
 
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli,
-        suggerendo la presenza di un altro enhancer.\\
-        Basandosi sulle modificazioni istoniche arricchite in SBE1, viene individuato \textcolor{orange}{SBE5}.\\
-        Tutte le verifiche relative ai TFBS applicate a SBE1 danno esito positivo per SBE5.
-        La delezione di SBE1 e SBE5 \warn{silenzia} \emph{Ssh} nella zli.
+        La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli.
+        \begin{itemize}
+            \frag{1-}{utilizzando le modificazioni istoniche arricchite in SBE1
+            e' individuato \textcolor{cyan}{SBE5}}
+            \frag{2-}{presenta gli stessi motifs di SBE1}
+            \frag{3-}{le analisi dei TFBS operate su SBE5 danno esito positivo}
+        \end{itemize}
     \end{frame}
 
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        Vengono usati i motifs individuati come base per una ricerca in \emph{S.kowalevskii}.\\
-        \textcolor{orange}{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs
-        Costrutti transgenici di skSBE1 in embrioni di topo hanno un pattern di espressione
-        molto simile a mmSBE1. Lo stesso vale per mmSBE1 e mmSBE5 in \emph{S.kowalevskii}.
+        Vengono usati i motifs individuati come base per una ricerca in \emph{S.kowalevskii}:\\
+        \begin{itemize}
+            \frag{1-}{\textcolor{magenta}{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs}
+            \frag{2-}{\textcolor{magenta}{skSBE1} in embrioni di topo presenta
+            il pattern di espressione di \textcolor{cyan}{mmSBE1}}
+            \frag{3-}{\textcolor{cyan}{mmSBE1/5} in \warn{embrioni} di \emph{S.kowalevskii}
+             presentano il pattern di espressione di \textcolor{magenta}{skSBE1}}
+        \end{itemize}
     \end{frame}
 
-    \section{Blow et al. (2010)}
+    % \section{Blow et al. (2010)}
 
     \begin{frame}[plain]{Blow et al. (2010)}
-        Il numero di enhancers attivi nello sviluppo del embrionale del cuore
-        e' molto basso rispetto agli altri tessuti.\\
-        ChipSeq con p300, coattivatore trascrizionale, espresso quasi
-        ovunque nell'embrione di topo.
+        \hh{Ipotesi}: l'utilizzo della conservazione ha individuato pochi enhancers.
+        legati allo sviluppo cardiaco. Quindi questi potrebbero non essere conservati.\\
+        \hh{Oggetto di studio}: sviluppo del cuore nell'embrione di topo.\\
+        \hh{Metodo}: ChipSeq con p300, coattivatore trascrizionale.\\
         \begin{itemize}
             \item 3597 regioni nel cuore
             \item 2759, 2786 e 3839 regioni nel prosencefalo,
@@ -150,12 +162,12 @@
     \begin{frame}[plain]{Blow et al.}
         Conservazione delle sequenze:
         \begin{itemize}
-            \item 84\% delle regione predette nel tessuto cardiaco non sovrappongo quelle degli altri tessuti
-            \item 6\% delle regioni predette nel tessuto cardiaco si sovrappongono a regioni `ultra-conserved'
+            \frag{1-}{84\% delle regione predette nel tessuto cardiaco non sovrappongo quelle degli altri tessuti}
+            \frag{2-}{6\% delle regioni predette nel tessuto cardiaco si sovrappongono a regioni `ultra-conserved'
             in PhastCons.\\
-            In prosencefalo, mesencefalo e negli arti si ha il 44\%, 39\% e 30\% rispettivamente.
-            \item le regioni del prosencefalo sono 7 volte piu' presenti tra quelle conservate
-            tra mammiferi e pesci
+            In prosencefalo, mesencefalo e negli arti si ha il 44\%, 39\% e 30\% rispettivamente.}
+            \frag{3-}{le regioni del prosencefalo sono 7 volte piu' presenti tra quelle conservate
+            tra mammiferi e pesci}
         \end{itemize}
     \end{frame}
 
@@ -164,20 +176,20 @@
         Test in vivo di 130 possibili enhancers predetti in cuore,
         usando un saggio transgenico in embrioni di topo:
         \begin{itemize}
-            \item 81 su 130 sono enhancers attivi \underline{solo} nel cuore durante lo sviluppo
-            \item arricchiti 13 volte nelle regioni di 10kb a monte dei geni definiti
-            `heart-development' in Gene Ontology.
-            \item arricchiti 14 volte delle regioni di 10kb a monte di 1000 geni espressi
-            durante lo sviluppo embrionale del cuore.
+            \frag{1-}{81 su 130 sono enhancers attivi \underline{solo} nel cuore durante lo sviluppo}
+            \frag{2-}{arricchiti 13 volte nelle regioni di 10kb a monte dei geni definiti
+            `heart-development' in Gene Ontology.}
+            \frag{3-}{arricchiti 14 volte delle regioni di 10kb a monte di 1000 geni espressi
+            durante lo sviluppo embrionale del cuore.}
         \end{itemize}
     \end{frame}
 
-    \section{Conclusione}
+    % \section{Conclusione}
 
     \begin{frame}[plain]{Conclusione}
         La conservazione evolutiva delle sequenze rimane una grande risorsa
-        per la predizione della funzionalita' delle sequenze.\\
-        Ad oggi sono state osservate poche eccezzioni come quelle presentate,
+        per la predizione della funzionalita' delle sequenze.\\~\\
+        Ad oggi sono state osservate poche eccezioni come quelle presentate,
         ma questo puo' essere dovuto al fatto che non le stiamo ricercando.\\
     \end{frame}
 
