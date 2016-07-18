@@ -1,7 +1,7 @@
 
 \documentclass{beamer}
 \usetheme{metropolis}
-
+\usepackage[utf8x]{inputenc}
 
 \newcommand{\warn}[1]{\textcolor{red}{#1}}
 \newcommand{\hh}[1]{\textcolor{orange}{#1}}
@@ -9,10 +9,9 @@
 % \long\def\frag[#1]#2{\uncover<#1>{\item #2}}
 
 \title{Metodi funzionali per valutare la conservazione evolutiva delle sequenze regolatrici}
-% TODO check del titolo
 \date{}
 \author{Relatore: Prof.\ Paolo Provero\\Candidato: Stefano Gilotto}
-\institute{Universita' degli studi di Torino\\Dipartimento di Biotecnologie Molecolari e Scienze per la Salute}
+\institute{Università degli Studi di Torino\\Dipartimento di Biotecnologie Molecolari e Scienze per la Salute}
 \titlegraphic{\hfill\includegraphics[height=2cm]{logo-unito.png}}
 
 
@@ -22,8 +21,8 @@
     \begin{frame}[plain]{Introduzione}
         Miglioramento delle tecniche di analisi:
         \begin{itemize}
-            \frag{1-}{grande mole di dati biologici}
-            \frag{2-}{necessita' di poter prevedere la funzione delle sequenze}
+            \frag{1-}{grande mole di dati genomici}
+            \frag{2-}{necessità di poter prevedere la funzione delle sequenze}
             \frag{3-}{conservazione evolutiva delle sequenze}
         \end{itemize}
     \end{frame}
@@ -31,30 +30,29 @@
 
     \begin{frame}[plain]{Introduzione}
         \begin{itemize}
-            \item numerose evidenze a favore dell'utilizzo della conservazione
-            \item esistono sequenze la cui funzione e' conservata, ma non la loro sequenza
+            \frag{1-}{numerose evidenze a favore dell'utilizzo di modelli basati sulla conservazione}
+            \frag{2-}{esistono sequenze la cui funzione è conservata, ma non la loro sequenza}
         \end{itemize}
-        Sono presentate delle tecniche per poter prevedere queste sequenze attraverso
-        analisi di carattere funzionale.
+        \uncover<3->{Sono presentate delle tecniche per poter prevedere queste sequenze attraverso
+        analisi di carattere funzionale.}
     \end{frame}
 
     % \section{Fisher et al.}
 
     \begin{frame}[plain]{Fisher et al. (2006)}
         % TODO che informazioni mettere dell'articolo
-        \hh{Ipotesi}: la funzione regolatrice di regioni non-coding puo' essere conservata,
+        \hh{Ipotesi}: la funzione regolatrice di regioni non-coding può essere conservata,
         in assenza di conservazione di sequenza.\\
         \hh{Oggetto di studio}: il \emph{locus} del gene \emph{Ret}, i cui esoni sono ben conservati,
         al contrario delle regioni limitrofe.\\
         \hh{Metodo}: Si confronta l'espressione delle regioni regolatrici
-        tra i teleosti (Zebrafish) e i mammiferi (uomo).\\
+        tra i teleosti (Zebrafish) e i mammiferi (Uomo).\\
     \end{frame}
 
 
     \begin{frame}[plain]{Fisher et al. (2006)}
         Le regione regolatrici sono definite attraverso il confronto di sequenze
         tra specie evolutivamente vicine.
-        % TODO spiegare perche' si usano specie vicine?
         \begin{itemize}
             \item ZCS-Zebrafish Conserved Sequences:\\
             10 regioni conservate tra zebrafish e pesce palla
@@ -86,9 +84,9 @@
     % \section{Yao et al.}
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        \hh{Ipotesi}: il controllo dello sviluppo della zli-\emph{zona limitans intrathalamica},
-        precede lo \warn{evoluzione dei vertebrati}.\\
-        \hh{Oggetto di studio}: il sistema di controllo della zli, specie il gene \emph{Ssh}
+        \hh{Ipotesi}: il controllo dello sviluppo della zli-\emph{zona limitans intrathalamica}
+        precede la comparsa dei vertebrati.\\
+        \hh{Oggetto di studio}: il sistema di controllo della zli e in particolare il gene \emph{Ssh}
         e il relativo enhancer \textcolor{cyan}{SBE1}.\\
         \hh{Metodo}: ricerca di nuovi enhancers attraverso caratteristiche funzionali
     \end{frame}
@@ -123,11 +121,11 @@
 
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        La delezione di SBE1 non elimna l'espressione di \emph{Ssh} nella zli.
+        La delezione di SBE1 non elimina l'espressione di \emph{Ssh} nella zli.
         \begin{itemize}
             \frag{1-}{utilizzando le modificazioni istoniche arricchite in SBE1
-            e' individuato \textcolor{cyan}{SBE5}}
-            \frag{2-}{presenta gli stessi motifs di SBE1}
+            è individuato \textcolor{cyan}{SBE5}}
+            \frag{2-}{presenta gli stessi motifs di SBE1, ma non ci sono altre sequenze in comune}
             \frag{3-}{le analisi dei TFBS operate su SBE5 danno esito positivo}
         \end{itemize}
     \end{frame}
@@ -147,7 +145,7 @@
     % \section{Blow et al. (2010)}
 
     \begin{frame}[plain]{Blow et al. (2010)}
-        \hh{Ipotesi}: l'utilizzo della conservazione ha individuato pochi enhancers.
+        \hh{Ipotesi}: l'utilizzo della conservazione ha individuato pochi enhancers
         legati allo sviluppo cardiaco. Quindi questi potrebbero non essere conservati.\\
         \hh{Oggetto di studio}: sviluppo del cuore nell'embrione di topo.\\
         \hh{Metodo}: ChipSeq con p300, coattivatore trascrizionale.\\
@@ -166,7 +164,7 @@
             \frag{2-}{6\% delle regioni predette nel tessuto cardiaco si sovrappongono a regioni `ultra-conserved'
             in PhastCons.\\
             In prosencefalo, mesencefalo e negli arti si ha il 44\%, 39\% e 30\% rispettivamente.}
-            \frag{3-}{le regioni del prosencefalo sono 7 volte piu' presenti tra quelle conservate
+            \frag{3-}{le regioni del prosencefalo sono 7 volte più presenti tra quelle conservate
             tra mammiferi e pesci}
         \end{itemize}
     \end{frame}
@@ -188,17 +186,17 @@
 
     \begin{frame}[plain]{Conclusione}
         La conservazione evolutiva delle sequenze rimane una grande risorsa
-        per la predizione della funzionalita' delle sequenze.\\~\\
+        per la predizione della funzionalità delle sequenze.\\~\\
         Ad oggi sono state osservate poche eccezioni come quelle presentate,
-        ma questo puo' essere dovuto al fatto che non le stiamo ricercando.\\
+        ma questo può essere una conseguenza del grande utilizzo di modelli basati sulla
+        conservazione.\\
     \end{frame}
 
 
     \begin{frame}[plain]{Ringraziamenti}
         \begin{itemize}
             \item Prof.\ Paolo Provero
-            \item Elena Grassi e il team dell'Unita Computazionale di Bioinformatica
-            \item \warn{Gli altri}
+            \item Elena Grassi e il team dell'Unità Computazionale di Bioinformatica
         \end{itemize}
     \end{frame}
 
