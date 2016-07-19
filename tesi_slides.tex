@@ -18,29 +18,39 @@
 \begin{document}
     \maketitle
 
+    % TODO add slide riguardo al problema del definire la
+
     \begin{frame}[plain]{Introduzione}
         Miglioramento delle tecniche di analisi:
         \begin{itemize}
-            \frag{1-}{grande mole di dati genomici}
-            \frag{2-}{necessità di poter prevedere la funzione delle sequenze}
-            \frag{3-}{conservazione evolutiva delle sequenze}
+            \frag{1-}{grande mole di dati di carattere biologico}
+            \frag{2-}{funzionalità delle regioni non-coding e del `junk-DNA'}
+            \frag{3-}{necessità di prevedere quali regioni siano funzionali}
         \end{itemize}
     \end{frame}
 
+    \begin{frame}[plain]{Introduzione}
+        modelli basati sulla conservazione delle sequenze
+        \begin{itemize}
+            \frag{2-}{non si basano su caratteristiche funzionali}
+        \end{itemize}
+        \begin{figure}
+            \includegraphics[scale=0.6]{align.png}
+        \end{figure}
+    \end{frame}
 
     \begin{frame}[plain]{Introduzione}
         \begin{itemize}
             \frag{1-}{numerose evidenze a favore dell'utilizzo di modelli basati sulla conservazione}
             \frag{2-}{esistono sequenze la cui funzione è conservata, ma non la loro sequenza}
         \end{itemize}
-        \uncover<3->{Sono presentate delle tecniche per poter prevedere queste sequenze attraverso
+        \uncover<3->{Sono presentate delle tecniche per poter prevedere e testare queste sequenze attraverso
         analisi di carattere funzionale.}
     \end{frame}
 
-    % \section{Fisher et al.}
 
     \begin{frame}[plain]{Fisher et al. (2006)}
-        % TODO che informazioni mettere dell'articolo
+        \includegraphics[scale=0.55]{ret-header.png}\\~\\
         \hh{Ipotesi}: la funzione regolatrice di regioni non-coding può essere conservata,
         in assenza di conservazione di sequenza.\\
         \hh{Oggetto di studio}: il \emph{locus} del gene \emph{Ret}, i cui esoni sono ben conservati,
@@ -59,6 +69,7 @@
             \item HCS-Human Conserved Sequences:\\
             13 regioni conservate tra uomo e alcuni mammiferi
         \end{itemize}
+        % TODO dire che queste regioni sono diverse tra di loro
     \end{frame}
 
 
@@ -76,14 +87,15 @@
     \begin{frame}[plain]{Fisher et al. (2006)}
         \begin{figure}
             \includegraphics[scale=0.2]{RET1.jpg}
-            \caption{Espressione delle ZCS e HCS}
+            % \caption{Espressione delle ZCS e HCS}
         \end{figure}
         Le regioni regolatrici umane sono quindi funzionalmente analoghe a quelle di zebrafish.
     \end{frame}
 
-    % \section{Yao et al.}
+    % \section{Yao et al.}3
 
     \begin{frame}[plain]{Yao et al. (2016)}
+        \includegraphics[scale=0.6]{zli-header.png}\\~\\
         \hh{Ipotesi}: il controllo dello sviluppo della zli-\emph{zona limitans intrathalamica}
         precede la comparsa dei vertebrati.\\
         \hh{Oggetto di studio}: il sistema di controllo della zli e in particolare il gene \emph{Ssh}
@@ -102,7 +114,7 @@
 
 
     \begin{frame}[plain]{Yao et al. (2016)}
-        Vengono individuati 6 motivi, che presentano sequenze capaci di potersi legare a TF noti.\\
+        Vengono individuati 6 motifs, che presentano sequenze capaci di potersi legare a TF noti.\\
         \begin{figure}
             \includegraphics[scale=0.45]{motifs.jpg}
         \end{figure}
@@ -137,7 +149,7 @@
             \frag{1-}{\textcolor{magenta}{skSBE1}: omologia di sequenza presente solo a livello dei 6 motifs}
             \frag{2-}{\textcolor{magenta}{skSBE1} in embrioni di topo presenta
             il pattern di espressione di \textcolor{cyan}{mmSBE1}}
-            \frag{3-}{\textcolor{cyan}{mmSBE1/5} in \warn{embrioni} di \emph{S.kowalevskii}
+            \frag{3-}{\textcolor{cyan}{mmSBE1/5} in embrioni di \emph{S.kowalevskii}
              presentano il pattern di espressione di \textcolor{magenta}{skSBE1}}
         \end{itemize}
     \end{frame}
@@ -145,6 +157,7 @@
     % \section{Blow et al. (2010)}
 
     \begin{frame}[plain]{Blow et al. (2010)}
+        \includegraphics[scale=0.6]{heart-header.png}\\~\\
         \hh{Ipotesi}: l'utilizzo della conservazione ha individuato pochi enhancers
         legati allo sviluppo cardiaco. Quindi questi potrebbero non essere conservati.\\
         \hh{Oggetto di studio}: sviluppo del cuore nell'embrione di topo.\\
@@ -157,7 +170,7 @@
     \end{frame}
 
 
-    \begin{frame}[plain]{Blow et al.}
+    \begin{frame}[plain]{Blow et al. (2010)}
         Conservazione delle sequenze:
         \begin{itemize}
             \frag{1-}{84\% delle regione predette nel tessuto cardiaco non sovrappongo quelle degli altri tessuti}
@@ -170,7 +183,7 @@
     \end{frame}
 
 
-    \begin{frame}[plain]{Blow et al.}
+    \begin{frame}[plain]{Blow et al. (2010)}
         Test in vivo di 130 possibili enhancers predetti in cuore,
         usando un saggio transgenico in embrioni di topo:
         \begin{itemize}
@@ -186,10 +199,12 @@
 
     \begin{frame}[plain]{Conclusione}
         La conservazione evolutiva delle sequenze rimane una grande risorsa
-        per la predizione della funzionalità delle sequenze.\\~\\
-        Ad oggi sono state osservate poche eccezioni come quelle presentate,
-        ma questo può essere una conseguenza del grande utilizzo di modelli basati sulla
-        conservazione.\\
+        per la predizione della funzionalità delle sequenze.
+        \\~\\
+        E' necessario ridefinire l'uso della conservazione
+        delle sequenze per le regioni non-coding, basandosi maggiormente sulla funzionalità
+        \\~\\
+        Sottostimiamo il numero di regioni funzionali non conservate a livello di sequenza.
     \end{frame}
 
 
